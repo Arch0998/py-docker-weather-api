@@ -7,10 +7,10 @@ API_KEY = os.environ.get("API_KEY")
 
 
 def get_weather() -> None:
-    URL = "http://api.weatherapi.com/v1/"
-    FILTERING = "Paris"
+    url = "http://api.weatherapi.com/v1/"
+    filtering = "Paris"
 
-    result = requests.get(URL + f"current.json?key={API_KEY}&q={FILTERING}")
+    result = requests.get(url + f"current.json?key={API_KEY}&q={filtering}")
 
     print(result.json())
 
